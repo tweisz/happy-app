@@ -11,11 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150513213420) do
+ActiveRecord::Schema.define(version: 20150513220521) do
 
   create_table "jokes", force: :cascade do |t|
     t.string   "setup"
     t.string   "punchline"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string   "text"
+    t.string   "author"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
