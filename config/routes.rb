@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   get 'home/index'
 
+  get "/joke" => "home#joke"
+  get "/quote" => "home#quote"
+
   resources :quotes
   resources :jokes
   

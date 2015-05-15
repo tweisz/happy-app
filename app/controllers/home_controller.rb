@@ -2,11 +2,13 @@ class HomeController < ApplicationController
   def index
   end
 
-  def displayjoke
-  	@joke = Joke.all.sample
+  def joke
+  	@displayme = Joke.all.sample
+  	render 'index'
   end
 
-  def displayquote
-  	@quote = Quote.all.sample
+  def quote
+  	@displayme = Quote.all.sample
+  	render 'index'
   end
 end
