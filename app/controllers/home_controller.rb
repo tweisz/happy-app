@@ -3,12 +3,14 @@ class HomeController < ApplicationController
   end
 
   def joke
-  	@displayme = Joke.all.sample
-  	render 'index'
+    @displayme = Joke.all.sample
+    @displayme = @displayme.setup + " " + @displayme.punchline
+    render 'index'
   end
 
   def quote
-  	@displayme = Quote.all.sample
-  	render 'index'
+    @displayme = Quote.all.sample
+    @displayme = @displayme.text + " " + @displayme.author
+    render 'index'
   end
 end

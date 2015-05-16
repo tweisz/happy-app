@@ -61,10 +61,6 @@ class QuotesController < ApplicationController
     end
   end
 
-  def random
-    @quote = Quote.all.sample
-  end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_quote
